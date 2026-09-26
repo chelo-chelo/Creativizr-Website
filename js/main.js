@@ -6,24 +6,28 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize 3D Rotating Software Scene (Photoshop, Illustrator, InDesign, CorelDRAW, Figma, Flutter)
-  if (window.Software3DShowcase) {
-    new window.Software3DShowcase('software-3d-canvas');
-  }
+  // 1. Initialize Hero Fullscreen Video Autoplay
+  initHeroVideo();
 
-  // 2. Initialize Header Navigation & Mobile Menu
+  // 2. Initialize Dark / Light Mode Theme Toggle
+  initThemeToggle();
+
+  // 3. Initialize Header Navigation & Mobile Menu
   initNavigation();
 
-  // 3. Initialize Services Showcase & Detail Modal (Auto 5-photo slideshow, wishlist, order, back)
+  // 4. Initialize Services Showcase & Detail Modal
   initServicesModal();
 
-  // 4. Initialize Wishlist / Cart System
+  // 5. Initialize Services Card Hover Slideshow (Auto 5-photo slideshow on 1s delay)
+  initCardHoverSlideshow();
+
+  // 6. Initialize Wishlist / Cart System (Header, Drawer, Modal & Card Buttons)
   initWishlistSystem();
 
-  // 5. Initialize Recent Work Auto Slideshow & Interactive Scroll
+  // 7. Initialize Recent Work Auto Slideshow & Interactive Scroll
   initRecentWorkShowcase();
 
-  // 6. Initialize Contact Form & Direct Action Buttons
+  // 8. Initialize Contact Form (Sends to creativizrdesigns@gmail.com)
   initContactSystem();
 });
 
@@ -462,6 +466,92 @@ const RECENT_WORK_DATA = [
 ];
 
 /* ==========================================================================
+   HERO BACKGROUND VIDEO SYSTEM (Autoplay, Loop, Fullscreen Cover)
+   ========================================================================== */
+function initHeroVideo() {
+  const video = document.getElementById('hero-bg-video');
+  if (!video) return;
+
+  // Modern browsers require video to be strictly muted for autoplay
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
+  video.setAttribute('loop', '');
+  video.loop = true;
+
+  // Ensure video source is assigned
+  if (!video.src && !video.currentSrc) {
+    video.src = './background/background.mp4';
+  }
+
+  const attemptPlay = () => {
+    video.muted = true;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        // Autoplay succeeded
+      }).catch(() => {
+        // Autoplay policy prevented playback until user interaction
+        const startOnUserInteraction = () => {
+          video.muted = true;
+          video.play().catch(() => {});
+          ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(evt => {
+            window.removeEventListener(evt, startOnUserInteraction);
+          });
+        };
+
+        ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'].forEach(evt => {
+          window.addEventListener(evt, startOnUserInteraction, { once: true, passive: true });
+        });
+      });
+    }
+  };
+
+  // Try immediately
+  attemptPlay();
+
+  // Also listen for media readiness events
+  video.addEventListener('loadedmetadata', attemptPlay, { once: true });
+  video.addEventListener('canplay', attemptPlay, { once: true });
+  video.addEventListener('canplaythrough', attemptPlay, { once: true });
+
+  // Handle visibility changes so video resumes smoothly if user switches tabs
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && video.paused) {
+      attemptPlay();
+    }
+  });
+
+  // Ensure seamless looping
+  video.addEventListener('ended', () => {
+    video.currentTime = 0;
+    attemptPlay();
+  });
+}
+
+/* ==========================================================================
+   THEME TOGGLE SYSTEM (Dark / Light Mode)
+   ========================================================================== */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById('theme-toggle-btn');
+  const savedTheme = localStorage.getItem('creativizr_theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('creativizr_theme', newTheme);
+      showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Light'} Mode`);
+    });
+  }
+}
+
+/* ==========================================================================
    1. NAVIGATION & MOBILE MENU
    ========================================================================== */
 function initNavigation() {
@@ -559,9 +649,10 @@ function initServicesModal() {
       if (!currentActiveService) return;
       closeServiceModal();
 
-      // Prefill WhatsApp direct message with friendly text
+      // Prefill WhatsApp direct message with friendly text and open chat
       const msg = encodeURIComponent(`Hello CREATIVIZR, I would like to place an order for: ${currentActiveService.name}. Please share pricing and next steps.`);
-      const whatsappUrl = `https://wa.me/?text=${msg}`;
+      const whatsappUrl = `https://wa.me/message/SRJOUG6J4NDEJ1?text=${msg}`;
+      window.open(whatsappUrl, '_blank');
 
       // Also scroll to contact form and prefill field
       const contactSection = document.getElementById('contact');
@@ -587,6 +678,7 @@ function initServicesModal() {
       if (!currentActiveService) return;
       toggleWishlistItem(currentActiveService);
       updateModalWishlistBtn();
+      updateWishlistUI();
     });
   }
 
@@ -748,6 +840,60 @@ function updateModalWishlistBtn() {
 }
 
 /* ==========================================================================
+   SERVICES CARD HOVER SLIDESHOW (Auto 5-photo slideshow on 1s delay)
+   ========================================================================== */
+function initCardHoverSlideshow() {
+  const cards = document.querySelectorAll('.service-item-card');
+
+  cards.forEach(card => {
+    const serviceId = card.dataset.serviceId;
+    const service = SERVICES_DATA.find(s => s.id === serviceId);
+    if (!service || !service.slides || service.slides.length === 0) return;
+
+    // Preload slides for ultra-smooth instantaneous switching
+    service.slides.forEach(slide => {
+      const preloadImg = new Image();
+      preloadImg.src = slide.url;
+    });
+
+    const imgEl = card.querySelector('.service-card-media img');
+    const dots = card.querySelectorAll('.card-slide-dot');
+    let slideIndex = 0;
+    let hoverTimer = null;
+
+    card.addEventListener('mouseenter', () => {
+      slideIndex = 0;
+      clearInterval(hoverTimer);
+
+      hoverTimer = setInterval(() => {
+        slideIndex = (slideIndex + 1) % service.slides.length;
+        if (imgEl) {
+          imgEl.style.opacity = '0.75';
+          setTimeout(() => {
+            imgEl.src = service.slides[slideIndex].url;
+            imgEl.style.opacity = '1';
+          }, 70);
+        }
+        dots.forEach((dot, idx) => dot.classList.toggle('active', idx === slideIndex));
+      }, 1000); // 1s delay
+    });
+
+    card.addEventListener('mouseleave', () => {
+      clearInterval(hoverTimer);
+      slideIndex = 0;
+      if (imgEl) {
+        imgEl.style.opacity = '0.75';
+        setTimeout(() => {
+          imgEl.src = service.coverPhoto || service.slides[0].url;
+          imgEl.style.opacity = '1';
+        }, 70);
+      }
+      dots.forEach((dot, idx) => dot.classList.toggle('active', idx === 0));
+    });
+  });
+}
+
+/* ==========================================================================
    3. WISHLIST / CART SYSTEM
    ========================================================================== */
 function getWishlist() {
@@ -792,6 +938,20 @@ function initWishlistSystem() {
   const clearBtn = document.getElementById('wishlist-clear-btn');
   const orderWhatsAppBtn = document.getElementById('wishlist-order-whatsapp');
 
+  // Service Card wishlist buttons handler
+  document.querySelectorAll('.card-wishlist-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent card click opening the details modal
+      const serviceId = btn.dataset.serviceId;
+      const service = SERVICES_DATA.find(s => s.id === serviceId);
+      if (!service) return;
+      toggleWishlistItem(service);
+      if (currentActiveService && currentActiveService.id === service.id) {
+        updateModalWishlistBtn();
+      }
+    });
+  });
+
   if (triggerBtn && drawer) {
     triggerBtn.addEventListener('click', () => {
       drawer.classList.add('open');
@@ -833,7 +993,7 @@ function initWishlistSystem() {
       }
       const names = list.map(item => `• ${item.name}`).join('%0A');
       const text = `Hello CREATIVIZR! I am ready to order the following design services:%0A%0A${names}%0A%0APlease let me know the bundle package and turnaround!`;
-      window.open(`https://wa.me/?text=${text}`, '_blank');
+      window.open(`https://wa.me/message/SRJOUG6J4NDEJ1?text=${text}`, '_blank');
     });
   }
 
@@ -846,6 +1006,14 @@ function updateWishlistUI() {
   countBadges.forEach(badge => {
     badge.textContent = list.length;
     badge.style.display = list.length > 0 ? 'inline-flex' : 'none';
+  });
+
+  // Sync all card wishlist buttons
+  document.querySelectorAll('.card-wishlist-btn').forEach(btn => {
+    const id = btn.dataset.serviceId;
+    const inWishlist = list.some(item => item.id === id);
+    btn.classList.toggle('in-wishlist', inWishlist);
+    btn.title = inWishlist ? 'Remove from Wishlist' : 'Add to Wishlist';
   });
 }
 
@@ -1068,24 +1236,41 @@ function initContactSystem() {
 
       const name = document.getElementById('contact-name').value.trim();
       const email = document.getElementById('contact-email').value.trim();
+      const serviceEl = document.getElementById('contact-service');
+      const serviceVal = serviceEl ? serviceEl.value : 'General Inquiry';
       const message = document.getElementById('contact-message').value.trim();
 
       if (!name || !email || !message) {
-        showToast('Please fill in your name, email, and message.');
+        showToast('Please fill in your name, email, and project details.');
         return;
       }
 
-      // Simulate sending
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = `
-          <span>Sending...</span>
+          <span>Sending to creativizrdesigns@gmail.com...</span>
           <svg class="spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-opacity="0.3"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
         `;
       }
 
-      setTimeout(() => {
-        showToast(`Thank you, ${name}! Your message has been received. CREATIVIZR will reply within 24 hours.`);
+      // Send to creativizrdesigns@gmail.com via FormSubmit AJAX API
+      fetch('https://formsubmit.co/ajax/creativizrdesigns@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          service: serviceVal,
+          message: message,
+          _subject: `New Design Project Inquiry from ${name} - CREATIVIZR`
+        })
+      })
+      .then(res => res.json())
+      .then(() => {
+        showToast(`Thank you, ${name}! Your email has been delivered to creativizrdesigns@gmail.com.`);
         form.reset();
 
         if (submitBtn) {
@@ -1097,11 +1282,26 @@ function initContactSystem() {
           setTimeout(() => {
             submitBtn.innerHTML = `
               <span>Send Message</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             `;
-          }, 3000);
+          }, 3500);
         }
-      }, 900);
+      })
+      .catch(() => {
+        // Fallback: direct mailto client
+        showToast(`Preparing email to creativizrdesigns@gmail.com...`);
+        const mailtoUrl = `mailto:creativizrdesigns@gmail.com?subject=${encodeURIComponent('CREATIVIZR Design Project Inquiry - ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nService: ' + serviceVal + '\n\nMessage:\n' + message)}`;
+        window.location.href = mailtoUrl;
+        form.reset();
+
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `
+            <span>Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          `;
+        }
+      });
     });
   }
 }

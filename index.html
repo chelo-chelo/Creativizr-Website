@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CREATIVIZR // To the Maximum of Creativity</title>
-  <meta name="description" content="CREATIVIZR is a premier graphic design studio specializing in Logo Design, Brand Style Guides, UI/UX, Social Media Flyers, Book Covers, Album Covers, Banners, Business Cards, and Product Packaging.">
-  <meta name="keywords" content="CREATIVIZR, Graphic Design, Logo Design, Brand Style Guides, UI/UX, Flyers, Book Covers, Album Covers, Banners, Business Cards, Product Packaging">
-  
+  <title>CreativizR.com</title>
+  <meta name="description"
+    content="CREATIVIZR is a premier graphic design studio specializing in Logo Design, Brand Style Guides, UI/UX, Social Media Flyers, Book Covers, Album Covers, Banners, Business Cards, and Product Packaging.">
+  <meta name="keywords"
+    content="CREATIVIZR, Graphic Design, Logo Design, Brand Style Guides, UI/UX, Flyers, Book Covers, Album Covers, Banners, Business Cards, Product Packaging">
+
   <!-- OpenGraph Metadata -->
   <meta property="og:title" content="CREATIVIZR // To the Maximum of Creativity">
-  <meta property="og:description" content="High-impact graphic design services: Logos, Brand Systems, UI/UX, Packaging, Covers, Flyers, and Commercial Graphics.">
+  <meta property="og:description"
+    content="High-impact graphic design services: Logos, Brand Systems, UI/UX, Packaging, Covers, Flyers, and Commercial Graphics.">
   <meta property="og:image" content="./assets/images/project1_aethera.jpg">
   <meta property="og:type" content="website">
 
   <!-- Simple, Clear, Bold Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="./css/style.css">
-
-  <!-- Three.js CDN for 3D Rotating Software Logos -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
+
 <body>
 
   <!-- Ambient Background Lighting -->
@@ -36,7 +40,8 @@
     <div class="container nav-container">
       <a href="#hero" class="brand-link" title="CREATIVIZR - To the Maximum of Creativity">
         <!-- Horizontal Logo (Wide Lockup) -->
-        <img src="./assets/logos/Vertical%20logo.png" alt="CREATIVIZR - To the Maximum of Creativity" class="header-logo">
+        <img src="./assets/logos/Vertical%20logo.png" alt="CREATIVIZR - To the Maximum of Creativity"
+          class="header-logo">
       </a>
 
       <!-- Navigation Links -->
@@ -50,21 +55,47 @@
         </ul>
       </nav>
 
-      <!-- Header Actions: Wishlist & CTA -->
+      <!-- Header Actions: Theme Toggle, Wishlist & WhatsApp CTA -->
       <div class="header-actions">
+        <!-- Dark / Light Mode Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode"
+          aria-label="Toggle Theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
         <!-- Wishlist / Cart Trigger -->
         <button class="wishlist-toggle-btn" id="header-wishlist-btn" title="View Saved Services">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
           </svg>
           <span>Wishlist</span>
           <span class="wishlist-counter-badge" style="display: none;">0</span>
         </button>
 
         <!-- Direct WhatsApp Quick Action -->
-        <a href="https://wa.me/?text=Hello%20CREATIVIZR!%20I%20would%20like%20to%20inquire%20about%20your%20graphic%20design%20services." target="_blank" rel="noopener" class="btn-primary btn-whatsapp" style="padding: 0.65rem 1.25rem; font-size: 0.9rem;">
+        <a href="https://wa.me/message/SRJOUG6J4NDEJ1" target="_blank" rel="noopener" class="btn-primary btn-whatsapp"
+          style="padding: 0.65rem 1.25rem; font-size: 0.9rem;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.761.879 2.796.879 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.77-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+            <path
+              d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.761.879 2.796.879 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.77-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z" />
           </svg>
           <span>Chat on WhatsApp</span>
         </a>
@@ -80,84 +111,68 @@
   </header>
 
   <!-- =========================================================================
-       HERO SECTION WITH 3D ROTATING SOFTWARE SHOWCASE
+       HERO SECTION WITH LOOPING BACKGROUND VIDEO
        ========================================================================== -->
   <main>
     <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-grid">
-          
-          <!-- Left Column: Clear Bold Copy & Branding -->
-          <div class="hero-copy-col">
-            <div class="hero-slogan-badge">
-              <span class="pulse-circle"></span>
-              <span>CREATIVIZR • To the Maximum of Creativity</span>
-            </div>
+      <!-- Looping Background Video -->
+      <div class="hero-video-container" aria-hidden="true">
+        <video class="hero-bg-video" id="hero-bg-video" autoplay loop muted playsinline webkit-playsinline
+          preload="auto" src="./background/background.mp4">
+          <source src="./background/background.mp4" type="video/mp4">
+          <source src="./assets/Background/background.mp4" type="video/mp4">
+          <source src="./background/background.mpeg" type="video/mp4">
+          <source src="./assets/Background/background.mpeg" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+      </div>
 
-            <h1 class="hero-title">
-              Design That Elevates Your Brand To Its <span class="gradient-text">Maximum Potential.</span>
-            </h1>
+      <div class="container hero-content-container">
+        <div class="hero-content-wrap">
 
-            <p class="hero-description">
-              Welcome to <strong>CREATIVIZR</strong>. We engineer world-class logos, comprehensive brand style guides, UI/UX interfaces, promotional flyers, book covers, banners, business cards, and luxury packaging crafted for undeniable commercial impact.
-            </p>
-
-            <div class="hero-cta-group">
-              <a href="#services" class="btn-primary">
-                <span>Explore Services</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-
-              <a href="#recent-work" class="btn-secondary">
-                <span>View Recent Work</span>
-              </a>
-            </div>
-
-            <!-- Trust Metrics -->
-            <div class="hero-trust-metrics">
-              <div class="metric-item">
-                <span class="metric-number">500+</span>
-                <span class="metric-label">Completed Projects</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-number">4.9 ★</span>
-                <span class="metric-label">Client Rating Score</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-number">100%</span>
-                <span class="metric-label">Original & Vector</span>
-              </div>
-            </div>
+          <div class="hero-slogan-badge">
+            <span class="pulse-circle"></span>
+            <span>CREATIVIZR • To the Maximum of Creativity</span>
           </div>
 
-          <!-- Right Column: 3D Interactive Rotating Software Logos Object -->
-          <div class="software-3d-stage">
-            <div class="software-3d-canvas" id="software-3d-canvas" title="Drag to rotate software logos in 3D"></div>
+          <h1 class="hero-title">
+            Design That Elevates Your Brand To Its <span class="gradient-text">Maximum Potential.</span>
+          </h1>
 
-            <!-- Active Software Tooltip / Info Badge -->
-            <div class="software-active-info">
-              <div class="software-active-title" id="software-active-title">Adobe Photoshop</div>
-              <div class="software-active-desc" id="software-active-desc">Advanced photo editing, manipulation & high-res mockups</div>
-            </div>
+          <p class="hero-description">
+            Welcome to <strong>CREATIVIZR</strong>. We engineer world-class logos, comprehensive brand style guides,
+            UI/UX interfaces, promotional flyers, book covers, banners, business cards, and luxury packaging crafted
+            for undeniable commercial impact.
+          </p>
 
-            <!-- 6 Interactive Tool Selector Buttons (Equal Dimensions & Interactive) -->
-            <div class="software-pills-row">
-              <button class="software-pill-btn active" data-index="0">Ps Photoshop</button>
-              <button class="software-pill-btn" data-index="1">Ai Illustrator</button>
-              <button class="software-pill-btn" data-index="2">Id InDesign</button>
-              <button class="software-pill-btn" data-index="3">Cd CorelDRAW</button>
-              <button class="software-pill-btn" data-index="4">Figma</button>
-              <button class="software-pill-btn" data-index="5">Flutter</button>
-            </div>
-
-            <div class="software-drag-hint">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+          <div class="hero-cta-group">
+            <a href="#services" class="btn-primary">
+              <span>Explore Services</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-              <span>Click or drag horizontally to spin in 3D • Tap any logo to inspect</span>
+            </a>
+
+            <a href="#recent-work" class="btn-secondary">
+              <span>View Recent Work</span>
+            </a>
+          </div>
+
+          <!-- Trust Metrics -->
+          <div class="hero-trust-metrics">
+            <div class="metric-item">
+              <span class="metric-number">500+</span>
+              <span class="metric-label">Completed Projects</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">4.9 ★</span>
+              <span class="metric-label">Client Rating Score</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Original & Vector</span>
             </div>
           </div>
 
@@ -166,32 +181,52 @@
     </section>
 
     <!-- ==========================================================================
-         SERVICES SECTION (9 Services as Buttons with Photos)
+         SERVICES SECTION (9 Services with Hover Slideshow & Wishlist)
          ========================================================================== -->
     <section class="section-wrapper" id="services">
       <div class="container">
-        
+
         <div class="section-header">
           <span class="section-tag">OUR CORE SPECIALTIES</span>
           <h2 class="section-title">Design Services Engineered For <span class="gradient-text">Excellence</span></h2>
-          <p class="section-subtitle">Click any service below to view an automatic 5-photo showcase gallery, package deliverables, pricing, and instant ordering.</p>
+          <p class="section-subtitle">Click any service below to view full showcase gallery, deliverables, pricing, and
+            instant ordering.</p>
         </div>
 
         <!-- 9 Services Grid -->
         <div class="services-grid">
-          
+
           <!-- 1. Logo Design -->
           <div class="service-item-card" data-service-id="logo-design" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop&q=80" alt="Logo Design" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop&q=80"
+                alt="Logo Design" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="logo-design"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Logo Design</h3>
-              <p class="service-short-desc">Iconic, memorable vector logos crafted to make your business stand out anywhere from apps to billboards.</p>
+              <p class="service-short-desc">Iconic, memorable vector logos crafted to make your business stand out
+                anywhere from apps to billboards.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -199,15 +234,34 @@
           <!-- 2. Brand Style Guides -->
           <div class="service-item-card" data-service-id="brand-guides" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&auto=format&fit=crop&q=80" alt="Brand Style Guides" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&auto=format&fit=crop&q=80"
+                alt="Brand Style Guides" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="brand-guides"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Brand Style Guides</h3>
-              <p class="service-short-desc">Comprehensive brand guidelines manuals defining typography, color palettes, spacing, and stationery.</p>
+              <p class="service-short-desc">Comprehensive brand guidelines manuals defining typography, color palettes,
+                spacing, and stationery.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -215,15 +269,34 @@
           <!-- 3. Website and App UI/UX -->
           <div class="service-item-card" data-service-id="ui-ux" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Website and App UI/UX" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+                alt="Website and App UI/UX" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="ui-ux"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Website and App UI/UX</h3>
-              <p class="service-short-desc">Intuitive, high-converting digital interfaces and responsive Figma design systems for web and mobile.</p>
+              <p class="service-short-desc">Intuitive, high-converting digital interfaces and responsive Figma design
+                systems for web and mobile.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -231,15 +304,34 @@
           <!-- 4. Social Media Flyers -->
           <div class="service-item-card" data-service-id="flyers" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80" alt="Social Media Flyers" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80"
+                alt="Social Media Flyers" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="flyers"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Social Media Flyers</h3>
-              <p class="service-short-desc">High-energy, attention-grabbing flyers tailored for Instagram, Facebook, TikTok, events, and print.</p>
+              <p class="service-short-desc">High-energy, attention-grabbing flyers tailored for Instagram, Facebook,
+                TikTok, events, and print.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -247,15 +339,34 @@
           <!-- 5. Book / Tute Covers -->
           <div class="service-item-card" data-service-id="book-covers" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80" alt="Book / Tute Covers" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80"
+                alt="Book / Tute Covers" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="book-covers"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Book / Tute Covers</h3>
-              <p class="service-short-desc">Captivating front, back, and spine covers for novels, academic tutorials, and Amazon KDP bestsellers.</p>
+              <p class="service-short-desc">Captivating front, back, and spine covers for novels, academic tutorials,
+                and Amazon KDP bestsellers.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -263,15 +374,34 @@
           <!-- 6. Album Covers -->
           <div class="service-item-card" data-service-id="album-covers" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80" alt="Album Covers" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80"
+                alt="Album Covers" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="album-covers"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Album Covers</h3>
-              <p class="service-short-desc">Striking vinyl, CD, and Spotify digital album art that captures sound visually and commands playlists.</p>
+              <p class="service-short-desc">Striking vinyl, CD, and Spotify digital album art that captures sound
+                visually and commands playlists.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -279,15 +409,34 @@
           <!-- 7. Banners -->
           <div class="service-item-card" data-service-id="banners" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&auto=format&fit=crop&q=80" alt="Banners" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&auto=format&fit=crop&q=80"
+                alt="Banners" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="banners"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Banners</h3>
-              <p class="service-short-desc">Expo rollup banners, trade show booths, street billboards, and responsive digital advertising headers.</p>
+              <p class="service-short-desc">Expo rollup banners, trade show booths, street billboards, and responsive
+                digital advertising headers.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -295,15 +444,34 @@
           <!-- 8. Business Cards -->
           <div class="service-item-card" data-service-id="business-cards" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&auto=format&fit=crop&q=80" alt="Business Cards" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&auto=format&fit=crop&q=80"
+                alt="Business Cards" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="business-cards"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Business Cards</h3>
-              <p class="service-short-desc">Luxury tactile cards featuring spot UV, foil stamping, matte black, embossing, and NFC digital integration.</p>
+              <p class="service-short-desc">Luxury tactile cards featuring spot UV, foil stamping, matte black,
+                embossing, and NFC digital integration.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -311,15 +479,34 @@
           <!-- 9. Product Packaging -->
           <div class="service-item-card" data-service-id="packaging" role="button" tabindex="0">
             <div class="service-card-media">
-              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80" alt="Product Packaging" loading="lazy">
-              <span class="service-badge">5 Showcase Slides</span>
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80"
+                alt="Product Packaging" loading="lazy">
+              <button class="card-wishlist-btn" title="Add to Wishlist" data-service-id="packaging"
+                aria-label="Add to Wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </button>
+              <div class="card-slide-indicators">
+                <span class="card-slide-dot active"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+                <span class="card-slide-dot"></span>
+              </div>
             </div>
             <div class="service-card-body">
               <h3 class="service-title">Product Packaging</h3>
-              <p class="service-short-desc">Unboxing experiences, structural box dielines, pouch bags, bottle labels, and photorealistic 3D CGI.</p>
+              <p class="service-short-desc">Unboxing experiences, structural box dielines, pouch bags, bottle labels,
+                and photorealistic 3D CGI.</p>
               <button class="service-explore-btn">
                 <span>View Details & Showcase</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -333,16 +520,17 @@
          ========================================================================== -->
     <section class="section-wrapper recent-work-wrapper" id="recent-work">
       <div class="container">
-        
+
         <div class="section-header">
           <span class="section-tag">SELECTED PORTFOLIO</span>
           <h2 class="section-title">Recent Work & <span class="gradient-text">Case Studies</span></h2>
-          <p class="section-subtitle">Explore our latest client successes. Features auto slideshow and interactive drag-to-scroll controls.</p>
+          <p class="section-subtitle">Explore our latest client successes. Features auto slideshow and interactive
+            drag-to-scroll controls.</p>
         </div>
 
         <!-- Slider Controls & Progress Line -->
         <div class="recent-work-slider-box">
-          
+
           <div class="recent-work-progress-bar">
             <div class="recent-progress-fill" id="recent-work-progress"></div>
           </div>
@@ -358,10 +546,14 @@
 
             <div class="recent-nav-arrows">
               <button class="recent-arrow-btn" id="recent-prev-btn" aria-label="Previous Project">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
               </button>
               <button class="recent-arrow-btn" id="recent-next-btn" aria-label="Next Project">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -377,55 +569,96 @@
     <section class="section-wrapper about-section" id="about">
       <div class="container">
         <div class="about-grid">
-          
+
           <!-- Left Column: Owner Photo & Role Badge -->
           <div class="about-photo-wrapper">
-            <img src="./assets/images/owner.jpg" alt="CREATIVIZR Founder & Creative Director" loading="lazy">
+            <img src="./assets/images/owner.jpeg" alt="Chelaka Botheju - CREATIVIZR Founder & Creative Director"
+              loading="lazy">
             <div class="about-photo-badge">
-              <h3 class="about-owner-name">Founder & Creative Director</h3>
-              <span class="about-owner-role">CREATIVIZR Studio Lead</span>
+              <h3 class="about-owner-name">Chelaka Botheju</h3>
+              <span class="about-owner-role">Founder & Creative Director • Studio Lead</span>
             </div>
           </div>
 
           <!-- Right Column: Description About Me & About Business -->
           <div class="about-story-col">
             <span class="section-tag">ABOUT US</span>
-            <h2 class="section-title">Driven By Passion. <span class="gradient-text">Obsessed With Perfection.</span></h2>
+            <h2 class="section-title">Driven By Passion. <span class="gradient-text">Obsessed With Perfection.</span>
+            </h2>
 
             <!-- About Me -->
             <p style="margin-bottom: 1rem;">
-              Hello and welcome! I am the founder and lead designer behind <strong>CREATIVIZR</strong>. With over 8 years of dedicated hands-on experience, I have partnered with startups, authors, musicians, and international brands to transform abstract ideas into striking, iconic visual assets.
+              Hello and welcome! I am <strong>Chelaka Botheju</strong>, the founder and lead designer behind
+              <strong>CREATIVIZR</strong>. With over 8
+              years of dedicated hands-on experience, I have partnered with startups, authors, musicians, and
+              international brands to transform abstract ideas into striking, iconic visual assets.
             </p>
 
             <p style="margin-bottom: 1.5rem;">
-              My expertise spans the entire design workflow—from precision vector mathematics in <strong>Illustrator</strong> and <strong>CorelDRAW</strong>, to complex photo manipulation in <strong>Photoshop</strong>, editorial publishing in <strong>InDesign</strong>, and cutting-edge digital experiences in <strong>Figma</strong> and <strong>Flutter</strong>.
+              My expertise spans the entire design workflow—from precision vector mathematics in
+              <strong>Illustrator</strong> and <strong>CorelDRAW</strong>, to complex photo manipulation in
+              <strong>Photoshop</strong>, editorial publishing in <strong>InDesign</strong>, and cutting-edge digital
+              experiences in <strong>Figma</strong> and <strong>Flutter</strong>.
             </p>
 
             <!-- About CREATIVIZR & Slogan -->
             <div class="about-highlight-box">
               <p>
-                "At CREATIVIZR, our core philosophy is simple: <strong>To the Maximum of Creativity</strong>. We believe every brand deserves a unique identity that commands respect, builds trust, and drives conversions."
+                "At CREATIVIZR, our core philosophy is simple: <strong>To the Maximum of Creativity</strong>. We believe
+                every brand deserves a unique identity that commands respect, builds trust, and drives conversions."
               </p>
             </div>
 
             <!-- Business Promises -->
             <div class="about-promises-grid">
               <div class="promise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 <span>100% Original Vector Art</span>
               </div>
               <div class="promise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 <span>Full Commercial Source Files</span>
               </div>
               <div class="promise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 <span>Unlimited Revisions Guarantee</span>
               </div>
               <div class="promise-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
                 <span>Fast & Direct Communication</span>
               </div>
+            </div>
+
+            <!-- Website & LinkedIn Action Buttons -->
+            <div class="about-social-buttons">
+              <a href="https://chelakabotheju.vercel.app/" target="_blank" rel="noopener"
+                class="about-btn about-btn-portfolio">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+                <span>Visit Portfolio Website</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/chelaka-botheju-6417601a7?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank" rel="noopener" class="about-btn about-btn-linkedin">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                <span>Connect on LinkedIn</span>
+              </a>
             </div>
 
           </div>
@@ -439,11 +672,12 @@
          ========================================================================== -->
     <section class="section-wrapper" id="reviews">
       <div class="container">
-        
+
         <div class="section-header">
           <span class="section-tag">TESTIMONIALS & TRUST</span>
           <h2 class="section-title">Customer Reviews & <span class="gradient-text">Ratings</span></h2>
-          <p class="section-subtitle">Real feedback from clients who trusted CREATIVIZR to shape their visual identity.</p>
+          <p class="section-subtitle">Real feedback from clients who trusted CREATIVIZR to shape their visual identity.
+          </p>
         </div>
 
         <!-- Rating Score Summary Bar -->
@@ -452,11 +686,26 @@
             <div class="rating-big-num">4.9</div>
             <div>
               <div class="stars-row">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
               </div>
               <span class="rating-count-text">Based on 250+ Verified Client Reviews</span>
             </div>
@@ -478,9 +727,9 @@
           </div>
         </div>
 
-        <!-- 6 Customer Review Cards -->
+        <!-- 6 Customer Review Cards with Sri Lankan clients and authentic Sinhala feedback -->
         <div class="reviews-grid">
-          
+
           <div class="review-card">
             <div class="review-header">
               <div class="stars-row">
@@ -488,46 +737,14 @@
               </div>
               <span class="review-service-badge">Packaging & Logo</span>
             </div>
-            <p class="review-text">"CREATIVIZR completely revitalized our skincare packaging and logo. Sales jumped by 40% after retail launch! Exceptional speed, incredible attention to detail, and friendly communication throughout."</p>
+            <p class="review-text">"අපේ brand එකට කරපු logo design එක සහ product packaging එක උපරිමයි! Customers ලාගෙන්
+              ලැබෙන ප්‍රතිචාර ඇත්තටම විශිෂ්ටයි. Very fast delivery and 100% professional service. Highly recommended!"
+            </p>
             <div class="reviewer-meta">
-              <div class="reviewer-avatar">SJ</div>
+              <div class="reviewer-avatar">KP</div>
               <div>
-                <h4 class="reviewer-name">Sarah Jenkins</h4>
-                <span class="reviewer-company">CEO, Lumina Organics</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="stars-row">
-                ★★★★★
-              </div>
-              <span class="review-service-badge">UI/UX (Figma)</span>
-            </div>
-            <p class="review-text">"The UI/UX design delivered for our mobile app was world-class. Every screen, component, and token was organized in Figma flawlessly. Our developer team implemented it without a single hitch."</p>
-            <div class="reviewer-meta">
-              <div class="reviewer-avatar">DM</div>
-              <div>
-                <h4 class="reviewer-name">David Miller</h4>
-                <span class="reviewer-company">Tech Lead, Apex Financial</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="stars-row">
-                ★★★★★
-              </div>
-              <span class="review-service-badge">Album Covers & Flyers</span>
-            </div>
-            <p class="review-text">"Every single album cover and concert flyer CREATIVIZR produces for our music artists turns heads. The visual punch and typographic boldness are exactly what we needed to stand out on Spotify."</p>
-            <div class="reviewer-meta">
-              <div class="reviewer-avatar">MV</div>
-              <div>
-                <h4 class="reviewer-name">Marcus Vance</h4>
-                <span class="reviewer-company">Label Head, Neon Sound</span>
+                <h4 class="reviewer-name">Kasun Perera</h4>
+                <span class="reviewer-company">Founder, Ceylon Spice Co.</span>
               </div>
             </div>
           </div>
@@ -539,12 +756,69 @@
               </div>
               <span class="review-service-badge">Book / Tute Covers</span>
             </div>
-            <p class="review-text">"Designing my textbook and tutorial covers with CREATIVIZR was an absolute breeze. The gold-foil geometric design looked stunning both on Amazon Kindle and in paperback print. Highly recommended!"</p>
+            <p class="review-text">"මගේ tuition class tute cover එක සහ book cover එක design කරගත්තේ CREATIVIZR එකෙන්.
+              Quality එක ගැන කතා කරන්න දෙයක් නෑ, super creative designs. Unlimited revisions දෙන නිසා හිතට හරියනකල්ම
+              කරගන්න පුළුවන් වුණා."</p>
             <div class="reviewer-meta">
-              <div class="reviewer-avatar">RA</div>
+              <div class="reviewer-avatar">DJ</div>
               <div>
-                <h4 class="reviewer-name">Dr. Rachel Adams</h4>
-                <span class="reviewer-company">Author & Educator</span>
+                <h4 class="reviewer-name">Dinithi Jayawardena</h4>
+                <span class="reviewer-company">Author & Education Consultant, Colombo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="stars-row">
+                ★★★★★
+              </div>
+              <span class="review-service-badge">Banners & Flyers</span>
+            </div>
+            <p class="review-text">"Social media flyers සහ event banners වල visual quality එක premium standard එකටම
+              තිබුණා. Trade show එකේදී banners ටික ගොඩක් කැපිලා පෙනුණා. Best graphic design service in Sri Lanka!"</p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">CS</div>
+              <div>
+                <h4 class="reviewer-name">Chaminda Silva</h4>
+                <span class="reviewer-company">Managing Director, Apex Ceylon</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="stars-row">
+                ★★★★★
+              </div>
+              <span class="review-service-badge">UI/UX (Figma)</span>
+            </div>
+            <p class="review-text">"The UI/UX Figma design for our mobile app and brand guidelines exceeded our
+              expectations. Clean typography, modern responsive layouts, and prompt communication throughout the
+              process."</p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">KS</div>
+              <div>
+                <h4 class="reviewer-name">Kavindi Senanayake</h4>
+                <span class="reviewer-company">Co-Founder, Aura Aesthetics Kandy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="stars-row">
+                ★★★★★
+              </div>
+              <span class="review-service-badge">Album Covers & Spotify</span>
+            </div>
+            <p class="review-text">"Spotify album art එක සහ release launch flyers ටික කරලා දුන්න විදිය සුපිරි. Visual
+              punch එක සහ color combination එක perfect. Will definitely work with Chelaka again!"</p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">TB</div>
+              <div>
+                <h4 class="reviewer-name">Thilina Bandara</h4>
+                <span class="reviewer-company">Music Producer & Independent Artist</span>
               </div>
             </div>
           </div>
@@ -556,29 +830,13 @@
               </div>
               <span class="review-service-badge">Brand Style Guides</span>
             </div>
-            <p class="review-text">"The full brand guide and luxury matte business cards arrived perfectly formatted for print with CMYK profiles. CREATIVIZR delivered on their slogan — To the Maximum of Creativity!"</p>
+            <p class="review-text">"Working with CREATIVIZR from overseas was effortless. Exceptional turnaround speed,
+              pristine vector master files, and striking creativity that truly elevates our releases."</p>
             <div class="reviewer-meta">
-              <div class="reviewer-avatar">JL</div>
+              <div class="reviewer-avatar">MV</div>
               <div>
-                <h4 class="reviewer-name">Jason Lee</h4>
-                <span class="reviewer-company">Founder, Nexus Innovations</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card">
-            <div class="review-header">
-              <div class="stars-row">
-                ★★★★★
-              </div>
-              <span class="review-service-badge">Banners & Rollups</span>
-            </div>
-            <p class="review-text">"We needed large-format trade show banners on an urgent 48-hour deadline. CREATIVIZR delivered stunning, high-resolution vector artwork that looked razor sharp when printed at 10 feet wide."</p>
-            <div class="reviewer-meta">
-              <div class="reviewer-avatar">ER</div>
-              <div>
-                <h4 class="reviewer-name">Elena Rostova</h4>
-                <span class="reviewer-company">Event Director, Horizon Expo</span>
+                <h4 class="reviewer-name">Marcus Vance</h4>
+                <span class="reviewer-company">Label Head, Neon Sound UK</span>
               </div>
             </div>
           </div>
@@ -593,15 +851,16 @@
          ========================================================================== -->
     <section class="section-wrapper" id="contact">
       <div class="container">
-        
+
         <div class="section-header">
           <span class="section-tag">GET IN TOUCH</span>
           <h2 class="section-title">Let's Create Something <span class="gradient-text">Iconic</span></h2>
-          <p class="section-subtitle">Reach out directly via WhatsApp, Facebook, or Email, or send us a message below.</p>
+          <p class="section-subtitle">Reach out directly via WhatsApp, Facebook, or Email, or send us a message below.
+          </p>
         </div>
 
         <div class="contact-grid">
-          
+
           <!-- Left Column: Direct Links to Facebook, WhatsApp, Email -->
           <div class="direct-channels-card">
             <h3 class="direct-channels-title">Direct Communication</h3>
@@ -610,12 +869,14 @@
             </p>
 
             <div class="direct-links-group">
-              
+
               <!-- WhatsApp Button -->
-              <a href="https://wa.me/?text=Hello%20CREATIVIZR!%20I%20would%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener" class="direct-action-btn direct-btn-wa">
+              <a href="https://wa.me/message/SRJOUG6J4NDEJ1" target="_blank" rel="noopener"
+                class="direct-action-btn direct-btn-wa">
                 <div class="channel-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.761.879 2.796.879 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.77-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/>
+                    <path
+                      d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.761.879 2.796.879 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.77-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z" />
                   </svg>
                 </div>
                 <div class="channel-texts">
@@ -625,10 +886,12 @@
               </a>
 
               <!-- Facebook Button -->
-              <a href="https://facebook.com/creativizr" target="_blank" rel="noopener" class="direct-action-btn direct-btn-fb">
+              <a href="https://www.facebook.com/share/1EnY2ijsgc/" target="_blank" rel="noopener"
+                class="direct-action-btn direct-btn-fb">
                 <div class="channel-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </div>
                 <div class="channel-texts">
@@ -638,23 +901,25 @@
               </a>
 
               <!-- Email Button -->
-              <a href="mailto:creativizr.design@gmail.com" class="direct-action-btn direct-btn-email">
+              <a href="mailto:creativizrdesigns@gmail.com" class="direct-action-btn direct-btn-email">
                 <div class="channel-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                   </svg>
                 </div>
                 <div class="channel-texts">
                   <span class="channel-label">Official Inquiries</span>
-                  <span class="channel-value">creativizr.design@gmail.com</span>
+                  <span class="channel-value">creativizrdesigns@gmail.com</span>
                 </div>
               </a>
 
             </div>
 
             <!-- Studio Working Hours -->
-            <div style="border-top: 1px solid var(--border-subtle); padding-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
+            <div
+              style="border-top: 1px solid var(--border-subtle); padding-top: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
               <div>🕒 <strong>Working Hours:</strong> Mon - Sat: 9:00 AM - 10:00 PM</div>
               <div style="margin-top: 0.35rem;">⚡ <strong>Average Reply:</strong> Under 1 Hour</div>
             </div>
@@ -663,21 +928,27 @@
           <!-- Right Column: Direct Message Form (Name, Email, Message, Send Button) -->
           <div class="contact-form-card">
             <h3 class="direct-channels-title" style="margin-bottom: 1.5rem;">Send a Direct Message</h3>
-            
-            <form id="creativizr-contact-form">
+
+            <form id="creativizr-contact-form" action="https://formsubmit.co/creativizrdesigns@gmail.com" method="POST">
+              <!-- FormSubmit Hidden Helpers -->
+              <input type="hidden" name="_subject" value="New Design Project Inquiry - CREATIVIZR Website">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
               <div class="form-group">
                 <label class="form-label" for="contact-name">Your Full Name *</label>
-                <input type="text" class="form-input" id="contact-name" placeholder="John Doe" required>
+                <input type="text" name="name" class="form-input" id="contact-name" placeholder="John Doe" required>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="contact-email">Your Email Address *</label>
-                <input type="email" class="form-input" id="contact-email" placeholder="john@example.com" required>
+                <input type="email" name="email" class="form-input" id="contact-email" placeholder="john@example.com"
+                  required>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="contact-service">Selected Service (Optional)</label>
-                <select class="form-input" id="contact-service">
+                <select class="form-input" name="service" id="contact-service">
                   <option value="">-- Choose a Service --</option>
                   <option value="Logo Design">Logo Design</option>
                   <option value="Brand Style Guides">Brand Style Guides</option>
@@ -693,12 +964,17 @@
 
               <div class="form-group">
                 <label class="form-label" for="contact-message">Project Details & Requirements *</label>
-                <textarea class="form-textarea" id="contact-message" placeholder="Tell us about your brand vision, deliverables needed, and timeline..." required></textarea>
+                <textarea class="form-textarea" name="message" id="contact-message"
+                  placeholder="Tell us about your brand vision, deliverables needed, and timeline..."
+                  required></textarea>
               </div>
 
               <button type="submit" class="btn-primary" id="contact-submit-btn" style="width: 100%;">
                 <span>Send Message</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
               </button>
             </form>
           </div>
@@ -715,25 +991,38 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
-        
+
         <!-- Brand Info & Vertical Logo -->
         <div>
           <!-- Stacked Vertical Logo -->
-          <img src="./assets/logos/Horizontal%20logo.png" alt="CREATIVIZR - To the Maximum of Creativity" class="footer-logo">
+          <img src="./assets/logos/Horizontal%20logo.png" alt="CREATIVIZR - To the Maximum of Creativity"
+            class="footer-logo">
           <div class="footer-slogan">To the Maximum of Creativity</div>
           <p class="footer-desc">
-            CREATIVIZR is a premier multidisciplinary graphic design studio dedicated to elevating brands with world-class logos, packaging, UI/UX, and commercial art.
+            CREATIVIZR is a premier multidisciplinary graphic design studio dedicated to elevating brands with
+            world-class logos, packaging, UI/UX, and commercial art.
           </p>
-          
+
           <div class="footer-social-row">
-            <a href="https://facebook.com/creativizr" target="_blank" rel="noopener" class="footer-social-btn" title="Facebook">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <a href="https://www.facebook.com/share/1EnY2ijsgc/" target="_blank" rel="noopener"
+              class="footer-social-btn" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
             </a>
-            <a href="https://wa.me/?text=Hello%20CREATIVIZR!" target="_blank" rel="noopener" class="footer-social-btn" title="WhatsApp">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.761.879 2.796.879 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.77-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+            <a href="https://wa.me/message/SRJOUG6J4NDEJ1" target="_blank" rel="noopener" class="footer-social-btn"
+              title="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.761.879 2.796.879 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.77-5.768-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z" />
+              </svg>
             </a>
-            <a href="mailto:creativizr.design@gmail.com" class="footer-social-btn" title="Email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <a href="mailto:creativizrdesigns@gmail.com" class="footer-social-btn" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
             </a>
           </div>
         </div>
@@ -821,11 +1110,16 @@
         <div class="modal-actions-row">
           <button class="btn-primary" id="service-modal-order">
             <span>Place Order Now</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
           </button>
 
           <button class="btn-wishlist" id="service-modal-wishlist">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
             <span>Add to Wishlist / Cart</span>
           </button>
 
@@ -854,9 +1148,14 @@
         </div>
 
         <div class="drawer-empty-msg" id="wishlist-empty-msg">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 1rem; opacity: 0.5;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            style="margin-bottom: 1rem; opacity: 0.5;">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
           <p>Your wishlist is currently empty.</p>
-          <p style="font-size: 0.85rem; margin-top: 0.4rem;">Browse our 9 design services and tap "Add to Wishlist" to save them here.</p>
+          <p style="font-size: 0.85rem; margin-top: 0.4rem;">Browse our 9 design services and tap "Add to Wishlist" to
+            save them here.</p>
         </div>
       </div>
 
@@ -875,7 +1174,7 @@
   <div class="global-toast" id="global-toast">Notification Message</div>
 
   <!-- Scripts -->
-  <script src="./js/three-scene.js"></script>
   <script src="./js/main.js"></script>
 </body>
+
 </html>
