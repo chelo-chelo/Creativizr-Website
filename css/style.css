@@ -82,6 +82,7 @@ html {
   background-color: var(--bg-main);
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {
@@ -616,7 +617,7 @@ button {
    ========================================================================== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1.75rem;
 }
 
@@ -1478,7 +1479,7 @@ button {
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 1.75rem;
 }
 
@@ -1980,19 +1981,65 @@ button {
 }
 
 @media (max-width: 768px) {
+  /* Prevent any horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* User-friendly container margins on mobile */
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Balanced section vertical margins */
+  .section-wrapper {
+    padding: 3.8rem 0;
+  }
+
+  .section-header {
+    margin: 0 auto 2.2rem auto;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Header adjustments & mobile navigation */
+  .nav-container {
+    height: 66px;
+  }
+
+  .header-logo {
+    height: 36px;
+    max-width: 160px;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
   .nav-links {
     position: fixed;
-    top: 76px;
+    top: 66px;
     left: 0;
     width: 100%;
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border-medium);
     flex-direction: column;
     padding: 1.5rem;
-    gap: 1.25rem;
+    gap: 1rem;
     transform: translateY(-120%);
     transition: transform 0.3s var(--ease);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+    z-index: 999;
   }
 
   .nav-links.open {
@@ -2003,29 +2050,319 @@ button {
     display: flex;
   }
 
+  /* Hero Section: user-friendly spacing and finger-friendly tap targets */
+  .hero-section {
+    padding-top: 96px;
+    padding-bottom: 48px;
+    min-height: 100svh;
+  }
+
+  .hero-slogan-badge {
+    font-size: 0.82rem;
+    padding: 0.38rem 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    line-height: 1.16;
+    margin-bottom: 1.1rem;
   }
 
-  .section-title {
-    font-size: 2.1rem;
+  .hero-description {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
   }
 
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-secondary {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .hero-trust-metrics {
+    gap: 1.25rem;
+    justify-content: space-around;
+    padding-top: 1.35rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .metric-number {
+    font-size: 1.55rem;
+  }
+
+  .metric-label {
+    font-size: 0.78rem;
+  }
+
+  /* Services Grid & Cards */
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 1.35rem;
   }
 
-  .footer-top-grid {
+  .service-card-media {
+    height: 215px;
+  }
+
+  .service-card-body {
+    padding: 1.25rem;
+  }
+
+  .service-title {
+    font-size: 1.35rem;
+  }
+
+  /* Recent Work Carousel */
+  .recent-work-slide {
+    flex: 0 0 calc(100% - 12px);
+    max-width: 100%;
+  }
+
+  .recent-work-track {
+    gap: 1rem;
+    padding: 0.5rem 0 1.25rem 0;
+  }
+
+  .recent-work-image-wrap {
+    height: 240px;
+  }
+
+  .recent-work-details {
+    padding: 1.25rem;
+  }
+
+  .recent-work-title {
+    font-size: 1.35rem;
+  }
+
+  .recent-work-controls {
+    margin-top: 1rem;
+  }
+
+  /* About Us */
+  .about-grid {
     grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .about-photo-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .about-photo-badge {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    padding: 1rem;
+  }
+
+  .about-owner-name {
+    font-size: 1.15rem;
   }
 
   .about-promises-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
+  .about-social-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .about-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Reviews */
   .reviews-summary-bar {
     flex-direction: column;
     text-align: center;
+    padding: 1.25rem 1rem;
+    gap: 1.25rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .review-card {
+    padding: 1.25rem;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Contact Section: Clean paddings, no squished fields */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .direct-channels-card,
+  .contact-form-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .direct-channels-desc {
+    margin-bottom: 1.4rem;
+  }
+
+  .direct-action-btn {
+    padding: 0.85rem 1rem;
+  }
+
+  .channel-value {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 3.5rem 0 1.5rem 0;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  /* Modals: Phone fit with breathing room */
+  .modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .service-modal-box {
+    border-radius: 16px;
+    max-height: 94vh;
+  }
+
+  .service-modal-slideshow {
+    height: 230px;
+  }
+
+  .service-modal-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .service-modal-title {
+    font-size: 1.65rem;
+  }
+
+  .deliverables-list {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-actions-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .modal-actions-row .btn-primary,
+  .modal-actions-row .btn-wishlist,
+  .modal-actions-row .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Wishlist Drawer: Fullscreen friendly on mobile */
+  .wishlist-drawer {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Extra small mobile adjustments (phones under 480px, e.g. iPhone 12/13/14 mini, SE, Galaxy) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-logo {
+    height: 30px;
+    max-width: 130px;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .wishlist-toggle-btn {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.8rem;
+  }
+
+  .wishlist-toggle-btn span:not(.wishlist-counter-badge) {
+    display: none;
+  }
+
+  .btn-whatsapp {
+    padding: 0.45rem 0.65rem !important;
+  }
+
+  .btn-whatsapp span {
+    display: none;
+  }
+
+  .hero-slogan-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .direct-channels-card,
+  .contact-form-card {
+    padding: 1.25rem 0.9rem;
+  }
+
+  .metric-number {
+    font-size: 1.35rem;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
   }
 }
 
