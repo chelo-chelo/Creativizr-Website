@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Initialize Contact Form (Sends to creativizrdesigns@gmail.com)
   initContactSystem();
+
+  // 9. Initialize About Section Video (Play on screen appear, freeze at end, replay on return)
+  initAboutVideo();
 });
 
 /* ==========================================================================
@@ -530,6 +533,173 @@ function initHeroVideo() {
     video.currentTime = 0;
     attemptPlay();
   });
+}
+
+/* ==========================================================================
+   ABOUT US SECTION VIDEO SYSTEM
+   Plays when in viewport, does not loop, freezes on last frame, and
+   resets/replays whenever scrolled away and back into view.
+   ========================================================================== */
+function initAboutVideo() {
+  const video = document.getElementById('about-owner-video');
+  const wrapper = document.getElementById('about-photo-wrapper') || video;
+  if (!video || !wrapper) return;
+
+  // Strict autoplay compatibility attributes
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
+
+  // Strictly disable looping
+  video.loop = false;
+  video.removeAttribute('loop');
+
+  // Maximum playback duration in seconds before freezing
+  const FREEZE_TIME = 5.0;
+
+  // Track visibility state and animation frame id
+  let isCurrentlyVisible = false;
+  let rafId = null;
+
+  // Safe time reset helper
+  const resetToStart = () => {
+    try {
+      if (video.readyState >= 1) {
+        video.currentTime = 0;
+      }
+    } catch (e) {
+      // Ignore if metadata is still loading
+    }
+  };
+
+  // High precision frame-perfect freeze check at 5 seconds
+  const checkFreezeFrame = () => {
+    if (video.currentTime >= FREEZE_TIME) {
+      video.pause();
+      try {
+        video.currentTime = FREEZE_TIME;
+      } catch (e) {}
+      cancelAnimationFrame(rafId);
+      return;
+    }
+    if (!video.paused && !video.ended) {
+      rafId = requestAnimationFrame(checkFreezeFrame);
+    }
+  };
+
+  video.addEventListener('play', () => {
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(checkFreezeFrame);
+  });
+
+  video.addEventListener('pause', () => {
+    cancelAnimationFrame(rafId);
+  });
+
+  video.addEventListener('timeupdate', () => {
+    if (video.currentTime >= FREEZE_TIME) {
+      video.pause();
+      try {
+        video.currentTime = FREEZE_TIME;
+      } catch (e) {}
+    }
+  });
+
+  // Play video with autoplay error handling
+  const playVideo = () => {
+    resetToStart();
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((err) => {
+        // Autoplay policy fallback: attach one-time listener to user gestures
+        const resumeOnInteraction = () => {
+          if (isCurrentlyVisible && video.currentTime < FREEZE_TIME) {
+            video.play().catch(() => {});
+          }
+          ['click', 'touchstart', 'scroll', 'keydown'].forEach((evt) => {
+            window.removeEventListener(evt, resumeOnInteraction);
+          });
+        };
+
+        ['click', 'touchstart', 'scroll', 'keydown'].forEach((evt) => {
+          window.addEventListener(evt, resumeOnInteraction, { once: true, passive: true });
+        });
+      });
+    }
+  };
+
+  // Pause and reset video when out of view
+  const stopAndReset = () => {
+    cancelAnimationFrame(rafId);
+    video.pause();
+    resetToStart();
+  };
+
+  // Ensure frame remains frozen if ended
+  video.addEventListener('ended', () => {
+    video.pause();
+    // Do not reset currentTime here: keep the frame frozen!
+  });
+
+  // Handle tab visibility changes: if user switches tabs and comes back
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (!video.paused && !video.ended) {
+        video.pause();
+      }
+    } else {
+      if (isCurrentlyVisible && video.paused && video.currentTime < FREEZE_TIME && !video.ended) {
+        video.play().catch(() => {});
+      }
+    }
+  });
+
+  // Use Intersection Observer for smooth, performant view detection
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // When section appears on screen (at least 20% visible)
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+          if (!isCurrentlyVisible) {
+            isCurrentlyVisible = true;
+            playVideo();
+          }
+        }
+        // When section disappears from screen (less than 5% or out of viewport)
+        else if (!entry.isIntersecting || entry.intersectionRatio <= 0.05) {
+          if (isCurrentlyVisible) {
+            isCurrentlyVisible = false;
+            stopAndReset();
+          }
+        }
+      });
+    }, {
+      threshold: [0, 0.05, 0.2, 0.5]
+    });
+
+    observer.observe(wrapper);
+  } else {
+    // Fallback for older browsers
+    const checkScroll = () => {
+      const rect = wrapper.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight * 0.8 && rect.bottom > window.innerHeight * 0.2;
+      const disappeared = rect.bottom <= 0 || rect.top >= window.innerHeight;
+
+      if (inView && !isCurrentlyVisible) {
+        isCurrentlyVisible = true;
+        playVideo();
+      } else if (disappeared && isCurrentlyVisible) {
+        isCurrentlyVisible = false;
+        stopAndReset();
+      }
+    };
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+  }
 }
 
 /* ==========================================================================
