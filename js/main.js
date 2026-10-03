@@ -42,7 +42,7 @@ const SERVICES_DATA = [
     id: 'logo-design',
     name: 'Logo Design',
     category: 'Brand Identity',
-    coverPhoto: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/logos/Logo%20(1).jpg',
     shortDesc: 'Iconic, memorable vector logos crafted to make your brand instantly recognizable.',
     fullDesc: 'We craft timeless, distinctive logotypes and symbols engineered for maximum memorability and cross-platform flexibility. From minimalist emblems and geometric marks to luxury monograms and dynamic 3D lockups, your logo will look razor sharp at 16 pixels or 50 feet wide on a billboard.',
     deliverables: [
@@ -55,29 +55,29 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/logos/Logo%20(1).jpg',
         title: 'Minimalist Vector Logomark',
-        caption: 'Golden ratio geometric construction for high-tech ventures'
+        caption: 'Precision geometric construction and distinctive brand identity'
       },
       {
-        url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&auto=format&fit=crop&q=80',
-        title: '3D Monogram & Abstract Emblem',
-        caption: 'Dynamic fluid visual mark engineered for modern digital branding'
+        url: './assets/Collection/logos/Logo%20(2).jpg',
+        title: '3D Monogram & Modern Emblem',
+        caption: 'Dynamic fluid visual mark engineered for modern corporate branding'
       },
       {
-        url: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/logos/Logo%20(3).jpg',
         title: 'Luxury Corporate Wordmark',
         caption: 'Bespoke kerning and typography for executive elegance'
       },
       {
-        url: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/logos/Logo%20(4).jpg',
         title: 'Chromatic Badge & Mascot Lockup',
         caption: 'High-voltage styling for creative studios and apparel'
       },
       {
-        url: 'https://images.unsplash.com/photo-1542744094-3a3172720a46?w=900&auto=format&fit=crop&q=80',
-        title: 'Comprehensive Logo Suite & Guidelines',
-        caption: 'Full responsive lockups across mobile, web, and physical merch'
+        url: './assets/Collection/logos/Logo%20(5).jpg',
+        title: 'Comprehensive Logo Identity Suite',
+        caption: 'Full responsive lockups across mobile, web, and physical merchandise'
       }
     ]
   },
@@ -85,7 +85,7 @@ const SERVICES_DATA = [
     id: 'brand-guides',
     name: 'Brand Style Guides',
     category: 'Brand Architecture',
-    coverPhoto: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/Brand%20Style%20Guides/Brand%20(1).jpg',
     shortDesc: 'Comprehensive brand manuals defining typography, colors, spacing, and voice.',
     fullDesc: 'A great brand needs strict consistency. We produce exhaustive, easy-to-follow brand identity books that empower your internal team and external partners to maintain flawless design integrity across every single marketing touchpoint.',
     deliverables: [
@@ -98,27 +98,27 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Brand%20Style%20Guides/Brand%20(1).jpg',
         title: 'Editorial Brand Manual Layout',
         caption: 'Crisp grid structure detailing layout specifications and margins'
       },
       {
-        url: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Brand%20Style%20Guides/Brand%20(2).jpg',
         title: 'Pantone & HEX Color Harmony Book',
-        caption: 'Strict contrast ratios, dark-mode adaptations, and accent accents'
+        caption: 'Strict contrast ratios, dark-mode adaptations, and accent palettes'
       },
       {
-        url: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Brand%20Style%20Guides/Brand%20(3).jpg',
         title: 'Typographic Hierarchy & Font Specs',
         caption: 'Display headlines, body tracking, and digital font licensing rules'
       },
       {
-        url: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Brand%20Style%20Guides/Brand%20(4).jpg',
         title: 'Corporate Stationery System',
         caption: 'Letterheads, envelopes, badges, and digital presentation slides'
       },
       {
-        url: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Brand%20Style%20Guides/Brand%20(5).jpg',
         title: 'Digital UI Asset Library',
         caption: 'Complete iconography and social media avatar standards'
       }
@@ -128,7 +128,7 @@ const SERVICES_DATA = [
     id: 'ui-ux',
     name: 'Website and App UI/UX',
     category: 'Digital Product Design',
-    coverPhoto: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/Web/web%20(1).png',
     shortDesc: 'Intuitive, high-converting digital interfaces for web platforms and mobile apps.',
     fullDesc: 'We architect frictionless user journeys and visually captivating interfaces in Figma and Flutter. Whether you need a high-conversion landing page, a complex SaaS dashboard, or a fluid mobile app, we balance aesthetic elegance with UX best practices.',
     deliverables: [
@@ -141,29 +141,29 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80',
-        title: 'SaaS Analytics Dashboard',
-        caption: 'Ultra-clean dark mode UI with real-time financial data visualization'
+        url: './assets/Collection/Web/web%20(1).png',
+        title: 'SaaS Platform Dashboard UI',
+        caption: 'Ultra-clean dark mode UI with interactive product interface'
       },
       {
-        url: 'https://images.unsplash.com/photo-1581291518655-9523c932edcf?w=900&auto=format&fit=crop&q=80',
-        title: 'Mobile App Screen Suite',
-        caption: 'Ergonomic iOS and Android UX tailored for thumb reach and speed'
+        url: './assets/Collection/Web/web%20(2).png',
+        title: 'Mobile & Web Responsive Experience',
+        caption: 'Ergonomic cross-platform UX tailored for speed and clarity'
       },
       {
-        url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&auto=format&fit=crop&q=80',
-        title: 'High-Conversion Landing Page',
-        caption: 'Persuasive typographic hierarchy, clear CTAs, and modern layout'
+        url: './assets/Collection/Web/web%20(3).png',
+        title: 'High-Conversion Landing Experience',
+        caption: 'Persuasive typographic hierarchy, clear CTAs, and sleek aesthetics'
       },
       {
-        url: 'https://images.unsplash.com/photo-1542744095-291d1f67b221?w=900&auto=format&fit=crop&q=80',
-        title: 'Figma Design System Architecture',
-        caption: 'Reusable atomic components, variants, and design tokens'
+        url: './assets/Collection/Web/web%20(4).png',
+        title: 'Interactive Figma Prototype System',
+        caption: 'Reusable component architecture, design tokens, and states'
       },
       {
-        url: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=900&auto=format&fit=crop&q=80',
-        title: 'E-Commerce Checkout Flow',
-        caption: 'Zero-friction payment screens and product showcase layouts'
+        url: './assets/Collection/Web/web%20(5).png',
+        title: 'Digital Web Application Flow',
+        caption: 'Zero-friction user journey and polished modern layout'
       }
     ]
   },
@@ -171,7 +171,7 @@ const SERVICES_DATA = [
     id: 'flyers',
     name: 'Social Media Flyers',
     category: 'Marketing Graphics',
-    coverPhoto: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/Flyers/flyer%20(1).jpg',
     shortDesc: 'High-energy, attention-grabbing flyers tailored for Instagram, Facebook, and print.',
     fullDesc: 'Stop the scroll and pack your events. We engineer explosive social media flyers, promotional graphics, and club/corporate announcements that command attention in crowded newsfeeds and print storefronts.',
     deliverables: [
@@ -184,28 +184,28 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Flyers/flyer%20(1).jpg',
         title: 'Nightclub & DJ Concert Flyer',
         caption: 'Cyberpunk neon lighting, bold 3D typography, and artist spotlight'
       },
       {
-        url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Flyers/flyer%20(2).jpg',
         title: 'Outdoor Music Festival Poster',
         caption: 'Dynamic festival branding with tiered headliner typography'
       },
       {
-        url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=900&auto=format&fit=crop&q=80',
-        title: 'Corporate Conference & Expo Flyer',
+        url: './assets/Collection/Flyers/flyer%20(3).jpg',
+        title: 'Corporate Event & Conference Flyer',
         caption: 'Polished executive branding for seminars, summits, and webinars'
       },
       {
-        url: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Flyers/flyer%20(4).jpg',
         title: 'Promotional Product Launch Ad',
-        caption: 'High-contrast promotional artwork tailored for Instagram Sponsored Ads'
+        caption: 'High-contrast promotional artwork tailored for Instagram and print'
       },
       {
-        url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=900&auto=format&fit=crop&q=80',
-        title: 'Seasonal Sale & Retail Flyer',
+        url: './assets/Collection/Flyers/flyer%20(5).jpg',
+        title: 'Seasonal Event & Retail Flyer',
         caption: 'Bold discount badge graphics and urgent call-to-action treatments'
       }
     ]
@@ -214,7 +214,7 @@ const SERVICES_DATA = [
     id: 'book-covers',
     name: 'Book / Tute Covers',
     category: 'Editorial & Publishing',
-    coverPhoto: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/Tute/tute%20(1).jpg',
     shortDesc: 'Captivating front, back, and spine covers for novels, academic tutorials, and guides.',
     fullDesc: 'Readers judge books by their covers every day. We design arresting book and tutorial covers that stand out on Amazon Kindle, bookstores, and school desks. Full wrap dielines with barcode integration, spine calculation, and foil effects.',
     deliverables: [
@@ -227,29 +227,29 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&auto=format&fit=crop&q=80',
-        title: 'Minimalist Modern Literature Cover',
-        caption: 'High-end Swiss typography paired with poignant conceptual art'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1532012164546-f432f2e3777f?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Tute/tute%20(1).jpg',
         title: 'Academic Tutorial & Guide Series',
         caption: 'Structured color-coded system for educational modules and exams'
       },
       {
-        url: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=900&auto=format&fit=crop&q=80',
-        title: 'Sci-Fi & Thriller Novel Jacket',
-        caption: 'Cinematic photo manipulation with textured foil stamping accents'
+        url: './assets/Collection/Tute/tute%20(2).jpg',
+        title: 'Educational Coursebook Cover',
+        caption: 'High-impact design tailored for classroom and digital study'
       },
       {
-        url: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=900&auto=format&fit=crop&q=80',
-        title: 'Business & Self-Help Bestseller Cover',
-        caption: 'Bold title treatment designed for instant thumbnail readability'
+        url: './assets/Collection/Tute/tute%20(3).jpg',
+        title: 'Masterclass Guide & Manual',
+        caption: 'Clean typography and conceptual layout for comprehensive tutorials'
       },
       {
-        url: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=900&auto=format&fit=crop&q=80',
-        title: 'Complete Wrap Dieline with Spine & Back',
-        caption: 'Precise spine millimeter calculation and blurb typography'
+        url: './assets/Collection/Tute/tute%20(4).jpg',
+        title: 'Workbook & Examination Series',
+        caption: 'Durable, clear jacket layout with quick-reference headers'
+      },
+      {
+        url: './assets/Collection/Tute/tute%20(5).jpg',
+        title: 'Complete Academic Curriculum Cover',
+        caption: 'Unified multi-volume visual identity across academic curricula'
       }
     ]
   },
@@ -257,7 +257,7 @@ const SERVICES_DATA = [
     id: 'album-covers',
     name: 'Album Covers',
     category: 'Music Art Direction',
-    coverPhoto: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/Album/Logo%20(1).jpg',
     shortDesc: 'Striking vinyl, CD, and Spotify digital album art that captures sound visually.',
     fullDesc: 'Give your music the visual identity it deserves. From indie vinyl record jackets to Spotify canvas animations and electronic single artwork, we blend artistic vision with sound culture.',
     deliverables: [
@@ -270,29 +270,29 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Album/Logo%20(1).jpg',
         title: 'Gatefold Vinyl Record Presentation',
         caption: 'Full collector-edition outer sleeve with custom foil badge'
       },
       {
-        url: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=900&auto=format&fit=crop&q=80',
-        title: 'Synthwave & Electronic EP Visual',
-        caption: 'Retro-futuristic neon chromaticism and custom typography'
+        url: './assets/Collection/Album/Logo%20(2).jpg',
+        title: 'Electronic & Synthwave EP Visual',
+        caption: 'Retro-futuristic neon styling and custom typography'
       },
       {
-        url: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Album/Logo%20(3).jpg',
         title: 'Hip-Hop & Trap Single Cover',
-        caption: 'High-contrast gritty photography with embossed gold logo lockup'
+        caption: 'High-contrast aesthetic with custom artist branding'
       },
       {
-        url: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Album/Logo%20(4).jpg',
         title: 'Ambient & Lo-Fi Acoustic Art',
         caption: 'Subtle painterly textures and analog grain aesthetics'
       },
       {
-        url: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Album/Logo%20(5).jpg',
         title: 'Complete Release Merch & Single Suite',
-        caption: 'Vinyl center labels, cassette J-cards, and tour posters'
+        caption: 'Vinyl center labels, digital streaming canvas, and tour posters'
       }
     ]
   },
@@ -300,7 +300,7 @@ const SERVICES_DATA = [
     id: 'banners',
     name: 'Banners',
     category: 'Large Format & Advertising',
-    coverPhoto: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/BAnners/Logo%20(1).jpg',
     shortDesc: 'Expo rollup banners, street billboards, and responsive digital advertising headers.',
     fullDesc: 'Make an undeniable statement at scale. We design high-resolution vector banners for trade shows, retail store rollups, sports events, billboards, and website headers engineered for maximum viewing distance impact.',
     deliverables: [
@@ -313,27 +313,27 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=900&auto=format&fit=crop&q=80',
-        title: 'High-Way Billboard Advertising',
+        url: './assets/Collection/BAnners/Logo%20(1).jpg',
+        title: 'Highway & Billboard Advertising',
         caption: 'Clear bold typography engineered for 3-second highway readability'
       },
       {
-        url: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/BAnners/Logo%20(2).jpg',
         title: 'Trade Show Rollup Banner Stand',
         caption: 'Eye-level value propositions and clean QR code lead capture'
       },
       {
-        url: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/BAnners/Logo%20(3).jpg',
         title: 'Exhibition Booth Backdrop & Podium',
         caption: 'Cohesive 10-foot panoramic backdrop for international summits'
       },
       {
-        url: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/BAnners/Logo%20(4).jpg',
         title: 'Website Hero & E-Commerce Banners',
         caption: 'Responsive web display headers for desktop and smartphone'
       },
       {
-        url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/BAnners/Logo%20(5).jpg',
         title: 'Retail Storefront Hanging Banner',
         caption: 'Vibrant double-sided banner graphics with grommet markers'
       }
@@ -343,7 +343,7 @@ const SERVICES_DATA = [
     id: 'business-cards',
     name: 'Business Cards',
     category: 'Corporate Stationery',
-    coverPhoto: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/Business%20cards/Logo%20(1).jpg',
     shortDesc: 'Luxury tactile cards featuring spot UV, foil stamping, matte black, and embossing.',
     fullDesc: 'Make every handshake memorable. We design bespoke, executive-level business cards that feel substantial in the hand and leave an enduring impression of credibility and elite craftsmanship.',
     deliverables: [
@@ -356,27 +356,27 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Business%20cards/Logo%20(1).jpg',
         title: 'Matte Black Velvet with Gold Foil',
         caption: 'Deep tactile luxury aesthetic with reflective metallic foil'
       },
       {
-        url: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Business%20cards/Logo%20(2).jpg',
         title: 'Minimalist Clean White Letterpress',
         caption: 'Crisp embossed typography on thick 600 GSM cotton stock'
       },
       {
-        url: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Business%20cards/Logo%20(3).jpg',
         title: 'Vertical Creative Studio Cards',
         caption: 'Modern vertical orientation with vibrant color-edge painted sides'
       },
       {
-        url: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Business%20cards/Logo%20(4).jpg',
         title: 'Spot Gloss & Holographic Cards',
         caption: 'Selective UV gloss varnish over sleek monochrome patterns'
       },
       {
-        url: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/Business%20cards/Logo%20(5).jpg',
         title: 'Complete Executive Stationery Suite',
         caption: 'Matching envelope seal, letterhead, and VIP access card'
       }
@@ -386,7 +386,7 @@ const SERVICES_DATA = [
     id: 'packaging',
     name: 'Product Packaging',
     category: 'Packaging & 3D Dielines',
-    coverPhoto: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80',
+    coverPhoto: './assets/Collection/packaging/Logo%20(1).jpg',
     shortDesc: 'Unboxing experiences, structural box dielines, pouch bags, and bottle labels.',
     fullDesc: 'Transform everyday goods into covetable retail icons. We combine structural dieline precision with shelf-stopping visual graphics for cosmetics, foods, beverages, electronics, and luxury supplements.',
     deliverables: [
@@ -399,27 +399,27 @@ const SERVICES_DATA = [
     ],
     slides: [
       {
-        url: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=900&auto=format&fit=crop&q=80',
-        title: 'Luxury Cosmetic Jar & Rigid Box',
-        caption: 'Minimalist frosted bottle with gold foil stamped rigid box packaging'
+        url: './assets/Collection/packaging/Logo%20(1).jpg',
+        title: 'Luxury Retail Product Packaging',
+        caption: 'Minimalist rigid box packaging with custom typography'
       },
       {
-        url: './assets/images/project1_aethera.jpg',
-        title: 'Aethera Obsidian Glass Bottle Packaging',
-        caption: 'Bespoke geometric glass vessel with fluorescent yellow typographic accents'
+        url: './assets/Collection/packaging/Logo%20(2).jpg',
+        title: 'Tactical Product Bottle & Vessel',
+        caption: 'Bespoke geometric vessel with fluorescent typographic accents'
       },
       {
-        url: './assets/images/project3_neonnova.jpg',
-        title: 'Neon Nova Tactical Beverage Can',
-        caption: 'Matte black aluminum can with holographic purple foiling & dielines'
+        url: './assets/Collection/packaging/Logo%20(3).jpg',
+        title: 'Matte Aluminum Can & Box Packaging',
+        caption: 'Tactical can architecture featuring foil stamping & dielines'
       },
       {
-        url: 'https://images.unsplash.com/photo-1547949003-9792a18a2601?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/packaging/Logo%20(4).jpg',
         title: 'Artisan Coffee Pouch & Bag Dielines',
         caption: 'Matte kraft pouch packaging with modern botanical vector illustrations'
       },
       {
-        url: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=900&auto=format&fit=crop&q=80',
+        url: './assets/Collection/packaging/Logo%20(5).jpg',
         title: 'Eco-Luxury Unboxing Retail Box',
         caption: 'Sustainable folding carton with custom interior pattern print'
       }
@@ -1030,30 +1030,52 @@ function initCardHoverSlideshow() {
     const dots = card.querySelectorAll('.card-slide-dot');
     let slideIndex = 0;
     let hoverTimer = null;
+    let fadeTimer = null;
+
+    const showSlide = (idx) => {
+      slideIndex = idx;
+      if (imgEl) {
+        clearTimeout(fadeTimer);
+        imgEl.style.opacity = '0.75';
+        fadeTimer = setTimeout(() => {
+          imgEl.src = service.slides[slideIndex].url;
+          imgEl.style.opacity = '1';
+        }, 70);
+      }
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === slideIndex));
+    };
+
+    // Dot hover/click preview
+    dots.forEach((dot, dotIdx) => {
+      dot.addEventListener('mouseenter', (e) => {
+        e.stopPropagation();
+        clearInterval(hoverTimer);
+        showSlide(dotIdx);
+      });
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        clearInterval(hoverTimer);
+        showSlide(dotIdx);
+      });
+    });
 
     card.addEventListener('mouseenter', () => {
       slideIndex = 0;
       clearInterval(hoverTimer);
 
       hoverTimer = setInterval(() => {
-        slideIndex = (slideIndex + 1) % service.slides.length;
-        if (imgEl) {
-          imgEl.style.opacity = '0.75';
-          setTimeout(() => {
-            imgEl.src = service.slides[slideIndex].url;
-            imgEl.style.opacity = '1';
-          }, 70);
-        }
-        dots.forEach((dot, idx) => dot.classList.toggle('active', idx === slideIndex));
+        const nextIdx = (slideIndex + 1) % service.slides.length;
+        showSlide(nextIdx);
       }, 1000); // 1s delay
     });
 
     card.addEventListener('mouseleave', () => {
       clearInterval(hoverTimer);
+      clearTimeout(fadeTimer);
       slideIndex = 0;
       if (imgEl) {
         imgEl.style.opacity = '0.75';
-        setTimeout(() => {
+        fadeTimer = setTimeout(() => {
           imgEl.src = service.coverPhoto || service.slides[0].url;
           imgEl.style.opacity = '1';
         }, 70);

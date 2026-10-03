@@ -746,6 +746,11 @@ button {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.45);
   transition: background 0.2s ease, width 0.2s ease;
+  cursor: pointer;
+}
+
+.card-slide-dot:hover {
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .card-slide-dot.active {
